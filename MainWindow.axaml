@@ -9,52 +9,54 @@
         Background="#F5F6F7">
 
     <DockPanel>
-        <Border DockPanel.Dock="Left" CornerRadius="30" Width="100" Margin="20" Background="White">
-            <Panel/>
-        </Border>
 
-        <ListBox Background="Transparent" Margin="0 10">
+        <!-- Навбар сверху -->
+        <Border DockPanel.Dock="Top" CornerRadius="20" Margin="10" Background="White" Effect="{StaticResource ShadowEffect}">
+            <DockPanel Margin="10">
+
+                <!-- Лого слева -->
+                <Image Source="Assets/Images/TUT.png" Width="50" Height="50" VerticalAlignment="Center" DockPanel.Dock="Left"/>
+
+                <!-- Панель меню по центру -->
+                <Menu DockPanel.Dock="Left" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <MenuItem Header="Файл">
+                        <MenuItem Header="Открыть"/>
+                        <MenuItem Header="Сохранить"/>
+                        <MenuItem Header="Выход"/>
+                    </MenuItem>
+                    <MenuItem Header="Редактировать">
+                        <MenuItem Header="Копировать"/>
+                        <MenuItem Header="Вставить"/>
+                    </MenuItem>
+                    <MenuItem Header="Помощь">
+                        <MenuItem Header="О программе"/>
+                    </MenuItem>
+                </Menu>
+
+                <!-- Фото аккаунта справа -->
+                <Image Source="Assets/Images/user.png" Width="30" Height="30" VerticalAlignment="Center" DockPanel.Dock="Right" Margin="0,0,10,0"/>
+                
+            </DockPanel>
+        </Border>
+<!-- VerticalAlignment="Center" -->
+        <!-- Список карточек курсов, центрированный по вертикали и горизонтали -->
+        <ListBox Background="Transparent" Margin="0 10" HorizontalAlignment="Center" >
             
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel/>
+                    <WrapPanel HorizontalAlignment="Center"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
             <ListBox.Styles>
-
-
                 <Style Selector="ListBoxItem">
-
                     <Setter Property="Background" Value="Transparent"/>
                     <Setter Property="Padding" Value="10"/>
                     <Setter Property="Margin" Value="5"/>
                     <Setter Property="CornerRadius" Value="20"/>
-
-                    <!-- Устанавливаем эффект тени по умолчанию -->
-                    <!-- <Setter Property="Effect">
-                        <Setter.Value>
-                            <DropShadowEffect Color="#408FFF" BlurRadius="0"/>
-                        </Setter.Value>
-                    </Setter> -->
-
-                    <!-- Селектор для состояния при наведении -->
-                    <!-- <Style Selector="^:hover">
-                        <Setter Property="Background" Value="Transparent"/>
-                        <Setter Property="Effect">
-                            <Setter.Value>
-                                <DropShadowEffect Color="#408FFF" BlurRadius="50"/>
-                            </Setter.Value>
-                        </Setter>
-                    </Style> -->
-
-
                     <Style Selector="^:selected">
-
                         <Setter Property="Background" Value="Transparent"/>
-
                     </Style>
-
                 </Style>
             </ListBox.Styles>
 
@@ -69,7 +71,13 @@
             <components:CourseCard/>
             <components:CourseCard/>
             <components:CourseCard/>
-
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            <components:CourseCard/>
+            
+            <!-- Дополнительные карточки -->
         </ListBox>
     </DockPanel>
 </Window>
