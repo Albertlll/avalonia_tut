@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
@@ -19,6 +19,10 @@
       <AvaloniaResource Include="Assets\Fonts\Montserrat.ttf" />
       <AvaloniaResource Include="Assets\Fonts\LatoBold.ttf" />
       <AvaloniaResource Include="Assets\Images\image.png" />
+      <AvaloniaResource Include="Assets\Images\TUT.png" />
+      <AvaloniaResource Include="Assets\Images\user.png" />
+
+
 
   </ItemGroup>
 </Project>
